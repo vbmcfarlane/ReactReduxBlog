@@ -6,12 +6,13 @@ import { fetchPost, deletePost } from '../actions';
 class PostsShow extends Component {
     componentDidMount() {
 
-        // 
-        // if (!this.props.post) { // check to see if records exist. do nothing if exists
+        // option 1: check to see if records exist. do nothing if exists
+        // if (!this.props.post) { 
         //     const { id } = this.props.match.params;
         //     this.props.fetchPost(id);
         // }
 
+        // option 2:    
         //Re-reads the records even if they already exist. Deals with data that's constantly updated 
         const { id } = this.props.match.params;
             this.props.fetchPost(id);
